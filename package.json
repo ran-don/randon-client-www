@@ -29,10 +29,11 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint"
-    ],
-    "*.(js|css)": "stylelint"
+    "**/*.(js|css)": [
+      "eslint",
+      "stylelint",
+      "cross-env CI=true react-scripts test --env=jsdom"
+    ]
   },
   "browserslist": {
     "production": [
@@ -49,6 +50,7 @@
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "8.22.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
