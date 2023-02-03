@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "styled-components",
+            "message": "Please import from styled-components/macro."
+          }
+        ],
+        "patterns": [
+          "!styled-components/macro"
+        ]
+      }
+    ],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": ["error", { "code": 120 }]
+  }
+}
