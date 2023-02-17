@@ -19,7 +19,7 @@ export const RoomsList = [
   }, {
     id: 5,
     peoplesCount: 5,
-    capacity: 10,
+    capacity: 5,
     deposit: 500,
   }, {
     id: 2,
