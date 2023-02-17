@@ -1,7 +1,7 @@
 export const RoomsList = [
   {
     id: 15123,
-    peoplesCount: 5,
+    peoplesCount: 1,
     capacity: 10,
     deposit: 500,
   },
@@ -13,19 +13,19 @@ export const RoomsList = [
   },
   {
     id: 1523,
-    peoplesCount: 5,
-    capacity: 10,
-    deposit: 500,
+    peoplesCount: 2,
+    capacity: 7,
+    deposit: 300,
   }, {
     id: 5,
     peoplesCount: 5,
-    capacity: 10,
+    capacity: 5,
     deposit: 500,
   }, {
     id: 2,
-    peoplesCount: 5,
+    peoplesCount: 7,
     capacity: 10,
-    deposit: 500,
+    deposit: 1000,
   }, {
     id: 7,
     peoplesCount: 5,
@@ -33,8 +33,8 @@ export const RoomsList = [
     deposit: 500,
   }, {
     id: 8,
-    peoplesCount: 5,
-    capacity: 10,
+    peoplesCount: 2,
+    capacity: 3,
     deposit: 500,
   },
 ]
