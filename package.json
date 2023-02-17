@@ -3,18 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "@babel/preset-env": "^7.20.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-jest": "^29.4.1",
+    "enzyme-adapter-react-16": "^1.15.7",
+    "eslint-plugin-n": "^15.6.1",
+    "inputmask": "^5.0.7",
+    "ky": "^0.33.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
+    "styled-components-breakpoint": "^3.0.0-preview.20",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false",
+    "test": "react-scripts test --watchAll=false --transformIgnorePatterns 'node_modules/(?!ky)/'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -24,7 +34,7 @@
     ]
   },
   "lint-staged": {
-    "**/*.(js|css)": [
+    "**/*.(js)": [
       "eslint",
       "stylelint"
     ]
@@ -45,6 +55,7 @@
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
+    "enzyme": "^3.11.0",
     "eslint": "8.22.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",

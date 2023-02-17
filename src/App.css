@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Thin.woff2') format('woff2');
+  font-weight: 1;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-ThinItalic.woff2') format('woff2');
+  font-weight: 1;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+html, body, #root, .App {
+  background-color: black;
+  width: 100%;
+  height: 100%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  all: unset;
+  color: #BFFF07;
+  text-decoration: underline;
+  text-underline: #BFFF07;
+  cursor: pointer;
 }
