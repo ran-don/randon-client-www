@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 
 export const SelectContainer = styled.div`
   font-family: 'Montserrat';
@@ -14,6 +14,7 @@ export const SelectContainer = styled.div`
   height: 60px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 `
 
 export const ArrowContainer = styled.div`
@@ -28,6 +29,10 @@ export const ArrowRight = styled.div`
   transform: rotate(-45deg);
   width: 10px;
   height: 10px;
+  
+  ${props => props.hidden && css`
+    visibility: hidden;
+  `}
 `
 
 export const ArrowLeft = styled(ArrowRight)`
@@ -39,4 +44,12 @@ export const SelectOption = styled.div`
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: transform 0.2s linear, opacity 0.1s linear;
+  position: relative;
+
+  &:nth-child(n) {
+    transform: ${props => `translateX(${props.selectIndex * 150}px)`};
+    top: ${props => `-${props.index * 60}px`};
+    opacity: ${props => props.selectIndex === 0 ? 1 : 0};
+  }
 `

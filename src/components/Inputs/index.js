@@ -10,6 +10,14 @@ export const Input = ({ ...attr }) => {
   />
 }
 
+export const InputNumber = ({ ...attr }) => {
+  return <S.InputStyled
+    type='number'
+    pattern='\d*'
+    { ...attr }
+    />
+}
+
 export const InputPhone = () => {
   const inputRef = useRef()
 
@@ -18,7 +26,7 @@ export const InputPhone = () => {
   }, [])
 
   return (
-    <S.InputStyled
+    <S.InputStyledBigger
       ref={inputRef}
       type='tel'
       placeholder='+7 (000) 000 00 00'

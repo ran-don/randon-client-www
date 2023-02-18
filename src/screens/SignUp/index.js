@@ -19,7 +19,7 @@ export const SignUpScreen = () => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-      navigate('/rooms')
+      navigate('/room-quick')
     }, 2000)
   }
 

@@ -5,14 +5,17 @@ import * as S from './styles'
 export const SelectSlider = ({ values }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const nextAvailable = (currentIndex + 1) < values.length
+  const prevAvailable = (currentIndex - 1) >= 0
+
   const nextOption = () => {
-    if ((currentIndex + 1) < values.length) {
+    if (nextAvailable) {
       setCurrentIndex(currentIndex + 1)
     }
   }
 
   const prevOption = () => {
-    if ((currentIndex - 1) >= 0) {
+    if (prevAvailable) {
       setCurrentIndex(currentIndex - 1)
     }
   }
@@ -20,11 +23,15 @@ export const SelectSlider = ({ values }) => {
   return (
     <S.SelectContainer>
       <S.ArrowContainer onClick={prevOption}>
-        <S.ArrowLeft />
+        <S.ArrowLeft hidden={!prevAvailable}/>
       </S.ArrowContainer>
-      <S.SelectOption>{values[currentIndex].label}</S.SelectOption>
+      <div style={{ overflow: 'hidden' }}>
+        {values.map((v, index) => (
+          <S.SelectOption key={v.value} index={index} selectIndex={index - currentIndex}>{v.label}</S.SelectOption>
+        ))}
+      </div>
       <S.ArrowContainer onClick={nextOption}>
-        <S.ArrowRight />
+        <S.ArrowRight hidden={!nextAvailable}/>
       </S.ArrowContainer>
     </S.SelectContainer>
   )
