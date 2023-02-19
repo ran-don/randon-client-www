@@ -2,9 +2,9 @@ import React from 'react'
 
 import * as S from './styles'
 
-export const ButtonsContainer = ({ children }) => {
+export const ButtonsContainer = ({ delay, children }) => {
   return (
-      <S.Container>
+      <S.Container delay={delay}>
         <S.ButtonsContainerStyled>{children}</S.ButtonsContainerStyled>
       </S.Container>
   )

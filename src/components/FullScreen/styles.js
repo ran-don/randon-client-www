@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 
-export const LoaderScreenContainer = styled.div`
+export const FullScreenContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: rgba(0,0,0,0.8);
   z-index: 10;
   position: fixed;
@@ -11,4 +11,5 @@ export const LoaderScreenContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `

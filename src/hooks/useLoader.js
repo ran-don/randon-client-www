@@ -1,8 +1,9 @@
 import React from 'react'
-import { LoaderScreen } from '../components/Loader'
+import { FullScreen } from '../components/FullScreen'
+import { Spinner } from '../components/Spinner'
 
 export const useLoader = loadingState => {
   return {
-    Loader: () => loadingState ? <LoaderScreen /> : null,
+    Loader: () => loadingState ? <FullScreen><Spinner /></FullScreen> : null,
   }
 }

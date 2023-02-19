@@ -10,6 +10,7 @@ export const ScrollableContainer = styled.div`
   overflow: scroll;
   min-height: min-content;
   position: relative;
+  margin-top: -30px;
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */

@@ -23,6 +23,7 @@ export const TitleStyled = styled.div`
   line-height: 29px;
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 
   color: #BFFF07;
 `

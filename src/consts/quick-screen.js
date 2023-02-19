@@ -1,3 +1,14 @@
+export const RoomType = [
+  {
+    label: 'Публичная',
+    value: 'public',
+  },
+  {
+    label: 'Приватная',
+    value: 'private',
+  },
+]
+
 export const DefaultPeopleRoomSize = [
   {
     label: '3 человека',

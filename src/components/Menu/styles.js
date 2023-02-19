@@ -19,31 +19,39 @@ export const MenuContainer = styled.div`
   top: -17px;
   position: absolute;
   width: 0;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   opacity: 0;
   padding: 28px 16px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #0E0E0E;
   
   border-radius: 30px;
-  transition: max-height 0.1s linear, width 0.1s linear, padding 0.1s linear, top 0.1s linear, opacity 0.1s linear;
+  transition: height 0.1s linear, width 0.1s linear, padding 0.1s linear, top 0.1s linear, opacity 0.1s linear;
   
   z-index: 3;
   
   ${({ open }) => open && css`
     width: 100%;
-    max-height: 100vh;
+    height: fit-content;
     top: -17px;
-    opacity: 1;
+    opacity: 1; 
+    
+    & > div {
+      visibility: visible;
+    }
   `}
 `
 
 export const RouterLink = styled(Link)`
-  all: unset !important;
+  all: unset;
+  cursor: pointer;
 `
 
 export const MenuItemsContainer = styled.div`
+  visibility: hidden;
+  transition: visibility 0.1s linear;
 `
 
 export const MenuItem = styled.div`
@@ -57,7 +65,6 @@ export const MenuItem = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px 0px;
-  cursor: pointer;
   
   &:after {
     position: absolute;
@@ -71,7 +78,7 @@ export const MenuItem = styled.div`
   
   
   &:nth-child(n) {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   
   &:first-child {
