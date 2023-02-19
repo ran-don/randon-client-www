@@ -10,7 +10,7 @@ export const InputStyled = styled.input`
   border-radius: 30px;
   border-color: transparent;
   color: rgba(255, 255, 255);
-  width: 280px;
+  width: 275px;
   height: 60px;
   padding: 0px 37px;
   

@@ -3,7 +3,7 @@ import React from 'react'
 import { ReactComponent as CheckSvg } from '../../assets/images/check.svg'
 import * as S from './styles'
 
-export const Alert = ({ content }) => {
+export const Alert = ({ content, color }) => {
   return (
     <S.AlertContainer>
       <S.SvgContainer>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Screen } from '../../components/Screen'
 import { ButtonsContainer } from '../../components/ButtonsContainer'
 import { ButtonPrimary, ButtonSecondary } from '../../components/Buttons'
@@ -10,12 +10,19 @@ import { SelectSlider } from '../../components/Selects'
 import { RoomType } from '../../consts/quick-screen'
 import { InputGroup } from '../../components/InputGroup'
 import { useAlert } from '../../hooks/useAlert'
+import { useLoader } from '../../hooks/useLoader'
 
 export const NewRoomScreen = () => {
+  const [loading, setLoading] = useState(false)
+  const { Loader } = useLoader(loading)
   const { AlertComponent, alert } = useAlert()
 
   const test = () => {
-    alert('Оплата прошла успешно!', '/')
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+      alert('Оплата прошла успешно!', '/')
+    }, 2000)
   }
 
   return (
@@ -36,6 +43,7 @@ export const NewRoomScreen = () => {
         <ButtonSecondary>Назад</ButtonSecondary>
         <ButtonPrimary onClick={test}>Далее</ButtonPrimary>
       </ButtonsContainer>
+      <Loader />
       <AlertComponent />
     </Screen>
   )

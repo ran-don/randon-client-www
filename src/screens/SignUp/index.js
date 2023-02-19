@@ -9,6 +9,7 @@ import * as S from './styles'
 import { Field } from '../../components/Field'
 import { InputCode, InputPhone } from '../../components/Inputs'
 import { useLoader } from '../../hooks/useLoader'
+import { CheckBox } from '../../components/CheckBox'
 
 export const SignUpScreen = () => {
   const navigate = useNavigate()
@@ -33,10 +34,9 @@ export const SignUpScreen = () => {
           <Field label='Код из СМС'>
             <InputCode />
           </Field>
-          <div>
-            <input type='checkbox' />
+          <CheckBox>
             Я согласен с условиями <br /><a href={'google.com'}>публичной оферты</a>
-          </div>
+          </CheckBox>
         </S.InputsContainer>
       </ScreenContent>
       <ButtonsContainer>

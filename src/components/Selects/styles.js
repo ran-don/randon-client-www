@@ -10,7 +10,7 @@ export const SelectContainer = styled.div`
   border-radius: 30px;
   border-color: transparent;
   color: rgba(255, 255, 255);
-  width: 350px;
+  width: 353px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -44,7 +44,7 @@ export const SelectOption = styled.div`
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: transform 0.2s linear, opacity 0.1s linear;
+  transition: transform 0.1s linear, opacity 0.1s linear;
   position: relative;
 
   &:nth-child(n) {

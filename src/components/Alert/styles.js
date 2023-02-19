@@ -1,6 +1,12 @@
 import styled from 'styled-components/macro'
 
+const AlertColors = {
+  danger: '#BFFF07',
+  warning: '#BFFF07',
+}
+
 export const AlertContainer = styled.div`
+  top: -22px;
   position: relative;
   width: 352px;
   height: 153px;
@@ -8,7 +14,7 @@ export const AlertContainer = styled.div`
   justify-content: center;
   align-items: center;
   
-  background: #BFFF07;
+  background: ${props => AlertColors[props.color] || '#BFFF07'};
   border-radius: 30px;
   
   @keyframes showAlert {

@@ -35,6 +35,6 @@ export const ButtonsContainerStyled = styled.div`
 
   ${media.sm`
     flex: unset;
-    width: 360px;
+    width: 380px;
   `}
 `
