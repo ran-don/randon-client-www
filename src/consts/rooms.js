@@ -4,6 +4,7 @@ export const RoomsList = [
     peoplesCount: 5,
     capacity: 10,
     deposit: 500,
+    isMember: true,
   },
   {
     id: 15124,
@@ -16,6 +17,7 @@ export const RoomsList = [
     peoplesCount: 5,
     capacity: 10,
     deposit: 500,
+    isMember: true,
   }, {
     id: 5,
     peoplesCount: 5,
@@ -36,5 +38,22 @@ export const RoomsList = [
     peoplesCount: 5,
     capacity: 10,
     deposit: 500,
+  },
+]
+
+export const MyRooms = [
+  {
+    id: 15123,
+    peoplesCount: 5,
+    capacity: 10,
+    deposit: 500,
+    isMember: true,
+  },
+  {
+    id: 1523,
+    peoplesCount: 5,
+    capacity: 10,
+    deposit: 500,
+    isMember: true,
   },
 ]

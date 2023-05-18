@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import * as S from './styles'
@@ -19,6 +19,14 @@ export const RoomCard = ({ roomInfo }) => {
     navigate('#')
   }
 
+  const getButton = useCallback(() => {
+    if (roomInfo.isMember) {
+      return (<S.JoinButton>Участник</S.JoinButton>)
+    }
+
+    return (<S.JoinButton onClick={onJoinButtonClick}>Участвовать</S.JoinButton>)
+  }, [roomInfo])
+
   return (
     <S.RoomCardContainer>
       <S.InfoContainer>
@@ -33,7 +41,7 @@ export const RoomCard = ({ roomInfo }) => {
         </S.ImageContainer>
         {depositInfo}
       </S.InfoContainer>
-      <S.JoinButton onClick={onJoinButtonClick}>Участвовать</S.JoinButton>
+      {getButton()}
     </S.RoomCardContainer>
   )
 }

@@ -10,8 +10,8 @@ export const JoinPrivateRoomScreen = () => {
   return (
     <Screen>
       <ScreenContent>
-        <Field label='Код комнаты'>
-          <InputNumber placeholder='Введите код комнаты'/>
+        <Field label='Код кампании'>
+          <InputNumber placeholder='Введите код кампании'/>
         </Field>
       </ScreenContent>
       <ButtonsContainer>

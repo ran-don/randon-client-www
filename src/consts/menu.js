@@ -1,14 +1,18 @@
 export const MenuItems = [
   {
-    label: 'Создать',
-    link: '/new-room',
-  },
-  {
     label: 'Найти',
     link: '/rooms',
   },
   {
-    label: 'Подключиться',
+    label: 'Создать',
+    link: '/new-room',
+  },
+  {
+    label: 'Присоединиться',
     link: '/join-private-room',
+  },
+  {
+    label: 'Мои кампании',
+    link: '/my-rooms',
   },
 ]
